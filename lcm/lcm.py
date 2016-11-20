@@ -26,7 +26,10 @@ def lcm(a, b):
 
 
 def calculate_lcm(arr):
+    # Initialzing the arr_lcm as first element of the list
     arr_lcm = arr[0]
+    # Parsing the list from the second element, as the first element is already considered
     for each_element in arr[1:]:
+        # Following the logic lcm(a, b, c) = lcm (a, lcm(b, c))
         arr_lcm = lcm(each_element, arr_lcm)
     return arr_lcm

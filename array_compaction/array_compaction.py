@@ -8,7 +8,6 @@
 #
 #############
 
-
 def array_compaction(arr):
 	"""
 	Since python lists are immutable, we have to create a new list instead of modifying the existing one
@@ -17,7 +16,7 @@ def array_compaction(arr):
 	# Index always points to the last element of the compact_array. Since compact_array is [] initially, index in None
 	index = None
 	for i in arr:
-		# Initialzing the compact_array
+		# Initialzing the compact_array and index
 		if compact_array == []:
 			compact_array.append(i)
 			index = 0
