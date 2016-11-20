@@ -1,4 +1,4 @@
 .DS_Store
 dfs/a.out
 angular-pouchdb/node_modules/
-test/coverage/
+angular-pouchdb/test/coverage/
