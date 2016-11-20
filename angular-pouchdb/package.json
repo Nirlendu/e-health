@@ -1,7 +1,7 @@
 {
   "name": "angular-pouchdb",
   "version": "1.0.0",
-  "description": "",
+  "description": "angular-pouchdb sample app",
   "main": "index.js",
   "scripts": {
     "test": "karma start karma.conf.js"
