@@ -10,7 +10,7 @@
 
 def array_compaction(arr):
 	"""
-	Since python lists are immutable, we have to create a new list instead of modifying the existing one
+	Returns a list with unique elements in it
 	"""
 	compact_array = []
 	# Index always points to the last element of the compact_array. Since compact_array is [] initially, index in None

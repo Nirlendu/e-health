@@ -1,118 +1,70 @@
 /*
- * Depth First Binary Tree Search using Recursion
- * Nirlendu Saha, 2016
+ *
+ * Copyright - Nirlendu Saha
+ * author - nirlendu@gmail.com
+ *
  */
-#include <stdio.h>
-#include <stdlib.h>
- 
+
+#include<stdio.h>
+#include<stdlib.h>
+  
 struct node
 {
-    int data;
-    struct node *left;
-    struct node *right;
+    int key;
+    struct node *left, *right;
 };
+  
+/* Create a new node */
+struct node *create_new_node(int item)
+{
+    struct node *temp =  (struct node *)malloc(sizeof(struct node));
+    temp->key = item;
+    temp->left = temp->right = NULL;
+    return temp;
+}
+  
+/* Depth First Search */
+void depth_first_search(struct node *root)
+{
+    if (root != NULL)
+    {
+        depth_first_search(root->left);
+        depth_first_search(root->right);
+        printf("%d \n", root->key);
+    }
+}
+  
+/* Insert a new node with given key in BST */
+struct node* insert_node(struct node* node, int key)
+{
+    /* If the tree is empty, return a new node */
+    if (node == NULL) return create_new_node(key);
  
-void build_node(struct node **, int);
-void depth_first_traversal(struct node *);
-void delete_tree(struct node **);
+    /* Otherwise, recur down the tree */
+    if (key < node->key)
+        node->left  = insert_node(node->left, key);
+    else if (key > node->key)
+        node->right = insert_node(node->right, key);   
  
+    /* return the (unchanged) node pointer */
+    return node;
+}
+  
+
 int main()
 {
-    struct node *head = NULL;
-    int choice = 0, num, flag = 0, key;
- 
-    // do
-    // {
-    //     printf("\nEnter your choice:\n1. Insert\n2. Perform DFS Traversal\n3. Exit\nChoice: ");
-    //     scanf("%d", &choice);
-    //     switch(choice)
-    //     {
-    //     case 1: 
-    //         printf("Enter element to insert: ");
-    //         scanf("%d", &num);
-    //         build_node(&head, num);
-    //         break;
-    //     case 2: 
-    //         depth_first_traversal(head);
-    //         break;
-    //     case 3: 
-    //         delete_tree(&head);
-    //         printf("Memory Cleared\nPROGRAM TERMINATED\n");
-    //         break;
-    //     default: 
-    //         printf("Not a valid input, try again\n");
-    //     }
-    // } while (choice != 3);
-
+    struct node *root = NULL;
+    root = insert_node(root, 50);
+    insert_node(root, 30);
+    insert_node(root, 20);
+    insert_node(root, 40);
+    insert_node(root, 70);
+    insert_node(root, 60);
+    insert_node(root, 80);
+  
+    // print DFS traversal of the BST
+    printf("Printing Nodes in Depth First Search order\n");
+    depth_first_search(root);
+  
     return 0;
-}
- 
-void build_node(struct node **head, int data)
-{
-    struct node *temp = *head, *prev = *head;
- 
-    if (*head == NULL)
-    {
-        *head = (struct node *)malloc(sizeof(struct node));
-        (*head)->data = data;
-        (*head)->left = (*head)->right = NULL;
-    }
-    else
-    {
-        while (temp != NULL)
-        {
-            if (data > temp->data)
-            {
-                prev = temp;
-                temp = temp->right;
-            }
-            else
-            {
-                prev = temp;
-                temp = temp->left;
-            }
-        }
-        temp = (struct node *)malloc(sizeof(struct node));
-        temp->data = data;
-        if (data >= prev->data)
-        {
-            prev->right = temp;
-        }
-        else
-        {
-            prev->left = temp;
-        }
-    }
-}
- 
-void depth_first_traversal(struct node *head)
-{
-    if (head)
-    {
-        if (head->left)
-        {
-            depth_first_traversal(head->left);
-        }
-        if (head->right)
-        {
-            depth_first_traversal(head->right);
-        }
-        printf("%d  ", head->data);
-    }
-}
- 
-void delete_tree(struct node **head)
-{
-    if (*head != NULL)
-    {
-        if ((*head)->left)
-        {
-            delete_tree(&(*head)->left);
-        }
-        if ((*head)->right)
-        {
-            delete_tree(&(*head)->right);
-        }
-        free(*head);
-    }
 }
