@@ -50,7 +50,8 @@
 		 */
 		it('PouchDB PUT Operation', function() {
 			var pouchDB = create_db('sample-db');
-			pouchDB.put({_id: Date.now().toString(), title: 'A new post!', upvotes: 0})
+			json_data = {_id: Date.now().toString(), user_name: 'user_name', post_content: 'post_content'}
+			pouchDB.put(json_data)
 				.then(correct_response)
 				.catch(error);
 		});

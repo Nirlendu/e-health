@@ -15,6 +15,6 @@ def rotate(arr, n):
 	# Storing the length to avoid recalculation
 	arr_len = len(arr)
 	# Adjusting the value of n to account for Right side rotations and cases where n > length of the array
-    n = arr_len - (n % arr_len)
-    # Splitting the array into two parts and merging them again in reverse order (Second part + First part)
-    return arr[n:] + arr[:n]
+	n = arr_len - (n % arr_len)
+	# Splitting the array into two parts and merging them again in reverse order (Second part + First part)
+	return arr[n:] + arr[:n]
