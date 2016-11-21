@@ -2,7 +2,7 @@
 
 Takes in a list, and rotates the array with given n
 
-Usage
+**Usage**
 
 ```python
 import array_rotation.rotate

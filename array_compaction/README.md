@@ -2,7 +2,7 @@
 
 Takes in a list, and returns the compact array with no duplicates
 
-Usage
+**Usage**
 
 ```python
 import array_compaction.array_compaction
