@@ -1,6 +1,6 @@
 # eHealth
 
-All the readme for the codes are in the respective directories
+**All the readme for the codes are in the respective directories**
 
 To run basic unit tests on the python modules, run
 
