@@ -5,7 +5,7 @@
  *
  */
 
- // Karma + Jasmine sample test script
+ /* Karma + Jasmine sample test script */
 
 (function () {
 	'use strict';

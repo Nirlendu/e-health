@@ -5,7 +5,7 @@
  *
  */
 
- // Angular App
+ /* Angular App using PouchDB */
 
 var app = angular.module('pouch-db-example', ['pouchdb']);
 
@@ -16,9 +16,10 @@ app.factory('pouchdb', function() {
 app.controller('MainCtrl', ['$scope','pouchdb', function($scope, pouchdb, posts){
 	$scope.test_string = 'Test String';
 	$scope.posts = []
-	$scope.addPost = function(){
-	  $scope.posts.push({title: 'A new post!', upvotes: 0});
-	  pouchdb.put({_id: Date.now().toString(), title: 'A new post!', upvotes: 0})
+	$scope.addPost = function(user_name, post_content){
+	  json_data = {_id: Date.now().toString(), user_name: user_name, post_content: post_content}
+	  $scope.posts.push(json_data)
+	  pouchdb.put(json_data)
 		.then(get)
 		.catch(error);
 	};

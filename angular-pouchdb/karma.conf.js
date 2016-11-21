@@ -5,7 +5,7 @@
  *
  */
 
-// Karma - Jasmine configuration file
+/* Karma - Jasmine configuration file */
 
 module.exports = function(config) {
 config.set({
@@ -13,9 +13,9 @@ config.set({
     files: [
         'assets/js/angular/angular.min.js',
         'assets/js/angular/angular-mocks.js',
-        'assets/js/pouchdb.min.js',
-        'assets/js/angular-pouchdb.min.js',
-        'assets/js/angular_app.js',
+        'assets/js/pouchdb/pouchdb.min.js',
+        'assets/js/angular-pouchdb/angular-pouchdb.min.js',
+        'app/app.js',
         'test/*.js'
     ],
     browsers: [
