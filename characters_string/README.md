@@ -15,11 +15,11 @@ print unique_elements_linear(first_list, second_list)
 
 **Logic**
 
-`**unique_elements_non_linear**`
++ unique_elements_non_linear
 
 First, we get a list of common elements using `sets`. Then we parse the first array, and if the current element is present is `common_elements_list`, append it to the `result_list`
 
-`**unique_elements_linear**`
++ unique_elements_linear
 
 We use `collection.OrderedDict` for this, as this stores the dictionary keys in order of appearance. 
 
