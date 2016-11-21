@@ -1,3 +1,6 @@
+init:
+	npm install
+
 tests:
 	npm test
 

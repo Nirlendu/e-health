@@ -11,7 +11,7 @@
 def gcd(a, b):
     """
     Greatest Common Divisor - Euclid's Algorithm.
-    Please refer - https://www.wikpedia.com/en/Euclidean_algorithm
+    Please refer - https://en.wikipedia.org/wiki/Euclidean_algorithm
     """
     while b:      
         a, b = b, a % b

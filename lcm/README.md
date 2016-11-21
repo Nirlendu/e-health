@@ -18,7 +18,7 @@ We need to calculate GCD, the proceed to calculate LCM using the formula `a * b 
 
 Calculation of GCD can be done using `Euclid's Algorithm`, as it is fast and efficient.
 
-Please refer : [Euclid's Algorithm Wikipedia Link](https://www.wikpedia.com/en/Euclidean_algorithm)
+Please refer : [Euclid's Algorithm Wikipedia Link](https://en.wikipedia.org/wiki/Euclidean_algorithm)
 
 **Time Complexity**
 

@@ -4,6 +4,11 @@ This is a sample implementation of an angular-app using PouchDB.
 
 Testing is done using Karma + Jasmine
 
+First, run the following to install dependencies
+```
+make init
+```
+
 To launch, run the command
 
 ```

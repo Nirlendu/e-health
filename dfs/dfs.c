@@ -23,14 +23,27 @@ struct node *create_new_node(int item)
     return temp;
 }
   
-/* Depth First Search */
-void depth_first_search(struct node *root)
+/* Pre Order Traversal */
+void pre_order_traversal(struct node *root)
 {
     if (root != NULL)
     {
-        depth_first_search(root->left);
-        depth_first_search(root->right);
+        pre_order_traversal(root->left);
+        pre_order_traversal(root->right);
         printf("%d \n", root->key);
+    }
+}
+
+/* Depth First Search */
+void depth_first_search(struct node *root, int key)
+{
+    if (root != NULL)
+    {
+        if(root->key == key){
+            printf("%d Key found\n", key);
+        }
+        depth_first_search(root->left, key);
+        depth_first_search(root->right, key);
     }
 }
   
@@ -62,9 +75,13 @@ int main()
     insert_node(root, 60);
     insert_node(root, 80);
   
-    // print DFS traversal of the BST
-    printf("Printing Nodes in Depth First Search order\n");
-    depth_first_search(root);
+    // print pre-order traversal of the BST
+    printf("Printing Nodes from pre-order traversal\n");
+    pre_order_traversal(root);
   
+    // print DFS of the BST
+    printf("Depth First Search for node having key 60\n");
+    depth_first_search(root, 60);
+
     return 0;
 }
