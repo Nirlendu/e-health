@@ -7,9 +7,9 @@ Takes in two lists, and returns a list of common elements sorted in order of occ
 ```python
 first_list = [1,2,3,3,4,5,5,5,6]
 second_list = [1,6,5,5]
-import characters-string.unique_elements_non_linear
+from characters_string.characters_string import unique_elements_non_linear
 print unique_elements_non_linear(first_list, second_list)
-import characters-string.unique_elements_linear
+from characters_string.characters_string import unique_elements_linear
 print unique_elements_linear(first_list, second_list)
 ```
 

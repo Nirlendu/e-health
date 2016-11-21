@@ -5,9 +5,9 @@ Takes in a list, and calculates the lcm.
 **Usage**
 
 ```python
-import lcm.lcm
+from lcm.lcm import calculate_lcm
 sample_list = [1,2,3,4,5,6]
-print lcm(sample_list)
+print calculate_lcm(sample_list)
 ```
 
 **Logic**

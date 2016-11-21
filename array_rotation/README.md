@@ -5,7 +5,7 @@ Takes in a list, and rotates the array with given n
 **Usage**
 
 ```python
-import array_rotation.rotate
+from array_rotation.array_rotation import rotate
 sample_list = [1,2,3,3,4,5,5,5,6]
 rotate_n = 4
 print rotate(sample_list, rotate_n)

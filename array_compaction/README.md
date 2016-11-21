@@ -5,7 +5,7 @@ Takes in a list, and returns the compact array with no duplicates
 **Usage**
 
 ```python
-import array_compaction.array_compaction
+from array_compaction.array_compaction import array_compaction
 sample_list = [1,2,3,3,4,5,5,5,6]
 print array_compaction(sample_list)
 ```

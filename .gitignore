@@ -1,4 +1,5 @@
 .DS_Store
+*.pyc
 dfs/a.out
 angular-pouchdb/node_modules/
 angular-pouchdb/test/coverage/
